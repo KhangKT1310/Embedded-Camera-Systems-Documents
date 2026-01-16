@@ -203,12 +203,38 @@ a=rtpmap:96 H265/90000
 ### 6.2 By NAL Unit Type
 
 * H.264 start code:
+![Image](doc/videocodec/img/h264nal.png)  
+
+ H264 obtains the NALU Type by code & 0x1F,
+
+![Image](doc/videocodec/img/h264sample.png)  
 
 ```
-00 00 00 01 67 (SPS)
+00 00 00 01 67
+
+  0110 0111 (0x67)
+& 0001 1111 (0x1F) 
+-----------
+  0000 0111 (0x07) = 7(DEC) => (SPS) 
 ```
 
-* H.265 NAL header structure differs (2-byte header)
+
+* H.265 NAL header structure differs (2-byte header)  
+![Image](doc/videocodec/img/h265nal.png)  
+
+H265 obtains the NALU Type by (code & 0x7E) >> 1.
+
+![Image](doc/videocodec/img/h265sample.png)  
+
+
+```
+  0010 0110 (0x26)
+& 0111 1110 (0x7E)
+-----------
+  0010 0110 (0x26) >> 1 = 0001 0011 (0x13) = 19 (DEC) => (IDR)
+
+
+```
 
 ### 6.3 By Bitrate Observation
 
