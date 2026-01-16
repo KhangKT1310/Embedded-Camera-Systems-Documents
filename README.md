@@ -57,9 +57,9 @@ Raw video example (uncompressed):
 
 Both H.264 and H.265 are based on the **hybrid block-based coding architecture**:
 
-![Image](doc/videocodec/img/overall.png)
+![Image](docs/videocodec/img/overall.png)
 
-![Image](doc/videocodec/img/pipeline.png)
+![Image](docs/videocodec/img/pipeline.png)
 
 Main components:
 
@@ -93,7 +93,7 @@ Main components:
   * CAVLC (baseline)
   * CABAC (main/high)
 
-![Image](doc/videocodec/img/h264block.png)
+![Image](docs/videocodec/img/h264block.png)
 
 ---
 
@@ -142,9 +142,9 @@ Main components:
 * Advanced intra prediction
 * Enhanced entropy coding
 
-![Image](doc/videocodec/img/h265block.png)
+![Image](docs/videocodec/img/h265block.png)
 
-![Image](doc/videocodec/img/h265eblock.png)
+![Image](docs/videocodec/img/h265eblock.png)
 
 ---
 
@@ -203,11 +203,11 @@ a=rtpmap:96 H265/90000
 ### 6.2 By NAL Unit Type
 
 * H.264 start code:
-![Image](doc/videocodec/img/h264nal.png)  
+![Image](docs/videocodec/img/h264nal.png)  
 
  H264 obtains the NALU Type by code & 0x1F,
 
-![Image](doc/videocodec/img/h264sample.png)  
+![Image](docs/videocodec/img/h264sample.png)  
 
 ```
 00 00 00 01 67
@@ -220,11 +220,11 @@ a=rtpmap:96 H265/90000
 
 
 * H.265 NAL header structure differs (2-byte header)  
-![Image](doc/videocodec/img/h265nal.png)  
+![Image](docs/videocodec/img/h265nal.png)  
 
 H265 obtains the NALU Type by (code & 0x7E) >> 1.
 
-![Image](doc/videocodec/img/h265sample.png)  
+![Image](docs/videocodec/img/h265sample.png)  
 
 
 ```
