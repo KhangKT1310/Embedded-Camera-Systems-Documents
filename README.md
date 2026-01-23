@@ -60,14 +60,14 @@ Each documentation module contains:
 
 | Module      | Path                            | Content Draft  | Technical Review | References | Examples(optional) | Status      |
 | ----------- | -----------------------------   | -------------  | ---------------- | ---------- | -------- | ----------- |
-| Overview    | `docs/overview/overview.md`     | ⏳             | ⏳               | ⏳         | ⏳       | In progress |
+| Overview    | `docs/overview/overview.md`     | ✅             | ✅               | ⏳         | ⬜       | In progress |
 | ISP         | `docs/isp/isp.md`               | ⬜             | ⬜               | ⬜         | ⬜       | Not started |
-| Video Codec | `docs/videocodec/videocodec.md` | ✅             | ✅               | ✅         | ⏳       | Completed   |
-| Audio       | `docs/audio/audio.md`           | ✅             | ✅               | ✅         | ⏳       | Completed   |
+| Video Codec | `docs/videocodec/videocodec.md` | ✅             | ✅               | ✅         | ⬜       | Completed   |
+| Audio       | `docs/audio/audio.md`           | ✅             | ✅               | ✅         | ⬜       | Completed   |
 | Streaming   | `docs/streaming/streaming.md`   | ⬜             | ⬜               | ⬜         | ⬜       | Not started |
 | Network     | `docs/network/network.md`       | ⬜             | ⬜               | ⬜         | ⬜       | Not started |
 | Firmware    | `docs/firmware/firmware.md`     | ⬜             | ⬜               | ⬜         | ⬜       | Not started |
-| ONVIF       | `docs/onvif/onvif.md`           | ⬜             | ⬜               | ⬜         | ⬜       | Not started |
+| ONVIF       | `docs/onvif/onvif.md`           | ✅             | ⚠️               | ⬜         | ⬜       | Not started |
 
 | Symbol | Meaning               |
 | ------ | --------------------- |
