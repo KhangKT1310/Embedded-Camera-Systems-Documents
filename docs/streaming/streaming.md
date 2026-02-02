@@ -20,10 +20,6 @@ This documentation focuses on **real-time, low-latency streaming**, not file-bas
 
 ## 2. Streaming in a Camera System (High-Level View)
 
-
-::contentReference[oaicite:0]{index=0}
-
-
 Typical camera streaming flow:
 
 1. Image sensor captures raw frames
