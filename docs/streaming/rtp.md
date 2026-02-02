@@ -1,6 +1,5 @@
 
 
-
 # Real-time Transport Protocol (RTP)
 *A Technical Deep Dive for Camera and Embedded Streaming Systems*
 
