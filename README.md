@@ -62,6 +62,9 @@ Each documentation module contains:
 | ----------- | -----------------------------   | -------------  | ---------------- | ---------- | -------- | ----------- |
 | Overview    | `docs/overview/overview.md`     | ✅             | ✅               | ⏳         | ⬜       | In progress |
 | ISP         | `docs/isp/isp.md`               | ⬜             | ⬜               | ⬜         | ⬜       | Not started |
+| Video Codec | `docs/videocodec/videocodec.md` | ✅             | ✅               | ✅         | ⏳       | Completed   |
+| Audio       | `docs/audio/audio.md`           | ✅             | ✅               | ✅         | ⏳       | Completed   |
+| Streaming   | `docs/streaming/streaming.md`   | ✅             | ⬜               | ⬜         | ⬜       | Not started |
 | Video Codec | `docs/videocodec/videocodec.md` | ✅             | ✅               | ✅         | ⬜       | Completed   |
 | Audio       | `docs/audio/audio.md`           | ✅             | ✅               | ✅         | ⬜       | Completed   |
 | Streaming   | `docs/streaming/streaming.md`   | ⬜             | ⬜               | ⬜         | ⬜       | Not started |
