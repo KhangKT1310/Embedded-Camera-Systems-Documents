@@ -104,7 +104,7 @@ Purpose:
 * Uniquely identifies the session
 * Used for session updates and caching
 
-📌 In cameras:
+In cameras:
 
 * Often static or auto-generated
 * Rarely updated dynamically
@@ -189,7 +189,7 @@ Syntax:
 a=rtpmap:<pt> <encoding>/<clock-rate>[/channels]
 ```
 
-📌 Dynamic payload types:
+Dynamic payload types:
 
 * Range: **96–127**
 * Assigned by the sender
@@ -244,7 +244,7 @@ Common H.264 parameters:
 
   ```
 
-📌 Mismatch here is a **common cause of black video**.
+Mismatch here is a **common cause of black video**.
 
 ---
 
@@ -335,7 +335,25 @@ However, **media-level concepts remain identical**:
 * `fmtp`
 * Direction attributes
 
+## RTSP SDP vs WebRTC SDP
+
+The following table summarizes the key architectural and functional differences between SDP usage in RTSP-based systems and WebRTC-based systems.
+
+| Feature | [RTSP SDP](./sdp_rtsp.md) | [WebRTC SDP](./sdp_webrtc.md) | Description |
+|----------|------------|--------------|--------------|
+| SDP Generation Model | Server-generated SDP | Offer/Answer negotiation model | In RTSP, the server provides a static SDP in response to a DESCRIBE request. In WebRTC, both peers exchange SDP messages and negotiate capabilities dynamically. |
+| NAT Traversal (ICE) | Not supported | ICE required | RTSP relies on direct connectivity. WebRTC uses ICE (STUN/TURN) to establish connectivity across NAT and firewalls. |
+| Transport Security | Optional (rarely used) | Mandatory (DTLS-SRTP) | RTSP typically transmits RTP over UDP/TCP without encryption. WebRTC always uses DTLS to establish secure SRTP media transport. |
+| DTLS Fingerprint | Not present | Required | WebRTC SDP includes a certificate fingerprint for DTLS identity verification and protection against man-in-the-middle attacks. |
+| BUNDLE Support | Not supported | Supported | RTSP uses separate ports per media stream. WebRTC can multiplex audio and video over a single transport using BUNDLE. |
+| RTCP Feedback (rtcp-fb) | Limited or absent | Fully supported | RTSP usually does not use dynamic feedback. WebRTC relies on RTCP feedback (NACK, PLI, REMB) for retransmission and adaptive bitrate control. |
+| Adaptive Bitrate | Not inherent | Built-in | RTSP streams are typically fixed bitrate. WebRTC supports dynamic bitrate adjustment based on network conditions. |
+| Encryption | Optional (RTSPS only) | Always encrypted | WebRTC mandates encryption for both signaling and media. RTSP encryption is optional and rarely deployed in LAN camera systems. |
+
+
 ---
+
+
 
 ## 12. Common SDP Pitfalls in Camera Systems
 
